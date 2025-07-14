@@ -1,32 +1,27 @@
-name: Build LaTeX CV
+name: Build CV
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Récupérer ton code
-      - name: Checkout du dépôt
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2️⃣ Installer une version minimale de TeXLive + les paquets nécessaires
-      - name: Installer LaTeX minimal
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-lang-french latexmk
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
 
-      # 3️⃣ Compiler avec latexmk (plus sûr que pdflatex)
-      - name: Compiler le CV
-        run: |
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
+      - name: Compile LaTeX to PDF
+        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
 
-      # 4️⃣ Sauvegarder le PDF en artefact
-      - name: Sauvegarder le PDF
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v3
         with:
-          name: CV
+          name: cv-pdf
           path: cv.pdf
