@@ -1,0 +1,204 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{palatino}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+% Page setup
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+\pdfgentounicode=1
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\CVItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% -----HEADING-------------------------------------------------------
+\begin{minipage}[c]{0.25\textwidth}
+  \begin{center}
+    \begin{tikzpicture}
+      \clip (0,0) circle (1.75cm);
+      \node at (0,0) {\includegraphics[width=3.5cm]{img}}; % Remplace "img" par ton image
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+\begin{minipage}[c]{0.7\textwidth}
+  {\huge \textbf{Oumayma Metoui}}\\[4pt]
+  {\large \textbf{Développeur Fullstack JS}}\\[8pt]
+  
+  \small{
+  Développeur scéniore passionnée avec plus de 6 ans d’expérience dans la création d’applications web modernes et performantes
+  }\\[12pt]
+  
+  \small
+  Téléphone : 55 158 591 \hspace{15pt} \\
+  Email : \href{mailto:oumayma.metoui@gmail.com} {oumayma.metoui@gmail.com} \\
+  LinkedIn : \href{https://linkedin.com/in/oumayma-metoui-9506412a5}{linkedin.com/in/oumayma-metoui-9506412a5} \hspace{15pt} \\
+  GitHub : \href{https://github.com/oumayma26} {github.com/oumayma26} \\
+  Portfolio : \href{https://oumayma-portfolio-five.vercel.app/}{oumayma-portfolio-five.vercel.app}
+\end{minipage}
+
+
+
+% -----EXPERIENCE-------------------------------------------------------
+\section{Expérience professionnelle}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Ingénieur FullStack JS}{Septembre 2018 - Aujourd'hui}
+      {Marabout Technology}{}
+      \CVItemListStart
+        \CVItem{Développement et maintenance d'un système MES (Manufacturing Execution System) pour gérer la production dans les usines textiles.}
+        % \CVItem{Team leader de l'équipe IT}
+        \CVItem{Conception et développement d'interfaces utilisateur avec Angular, assurant une expérience utilisateur fluide et performante.}
+        
+        \CVItem{Création d'API REST robustes et sécurisées pour intégrer des systèmes tiers et faciliter l'interopérabilité des flux de données.}
+        \CVItem{Gestion des déploiements backend avec PM2 et gestion des applications frontend sur Apache.}
+        \CVItem{Implémentation d'un tableau de bord interactif permettant aux responsables de suivre la performance de production en temps réel.}
+    
+        \CVItem{Technologies utilisées : Angular 18, Node.js, PostgreSQL, RabbitMQ, Redis, Socket.IO, PM2.}
+      \CVItemListEnd
+      
+    \CVSubheading
+      {Ingénieur Java Spring Angular}{Octobre 2017 - Août 2018}
+      {Solution Group}{}
+      \CVItemListStart
+        \CVItem{Développement et maintenance d’une application de gestion d’assurance en utilisant Spring Boot et Angular.}
+        \CVItem{Création d’un site web responsive avec un design moderne et intuitif.}
+        \CVItem{Développement d’une application PHP pour la gestion des factures et l'automatisation des processus financiers.}
+      \CVItemListEnd
+
+      \CVSubheading
+      {Stagiaire - Developpeur Spring - Angular}{Oct 2016-dec 2016}
+      {Centre National de l’Informatique}{}
+      \CVItemListStart
+        \CVItem{PFE: Conception et développement  d'une application Spring de suivi des paies}
+        \CVItem{AngularJS, Spring Boot, Spring security, Spring Data, Bootstrap}
+      \CVItemListEnd
+
+       \CVSubheading
+      {Stagiaire - développeuse java}{fev- Mai 2014}
+      {Caisse Nationale de S´ecurit´e Sociale}{}
+      \CVItemListStart
+        \CVItem{PFE: Conception et développement d’une application  de gestion de formation}
+      \CVItemListEnd
+  \CVSubHeadingListEnd
+
+% -----EDUCATION--------------------------------------------------------
+\section{Éducation}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Mastère professionnel | \emph{\small{Ingénierie des Systèmes d'Information}}}{2015 -- 2017}
+      {École Nationale d'Ingénieurs de Carthage}{}
+    \CVSubheading
+      {Licence en Informatique | \emph{\small{Systèmes Informatique et Logiciel}}}{2011 -- 2013}
+      {École Nationale d'Ingénieurs de Carthage}{}
+    \CVSubheading
+      {Baccalauréat en Informatique}{2010}
+      {}{}
+  \CVSubHeadingListEnd
+
+% -----SKILLS----------------------------------------------------------
+\section{Compétences Techniques}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{
+     \item \textbf{Frontend} : Angular (18+), React, TypeScript, HTML5, CSS3, Bootstrap, RxJS, Angular material
+     \item \textbf{Backend} : Node.js (Express.js, NestJS), MongoDB, RESTful APIs, Socket.IO
+     \item \textbf{Base de données} : PostgreSQL, MySQL, Redis
+     \item \textbf{Outils et Technologies} : Docker, RabbitMQ, PM2, Apache, Git
+     \item \textbf{Méthodologies} : Agile (Scrum, Kanban)
+    }
+ \end{itemize}
+
+% -----CERTIFICATIONS----------------------------------------------------------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \textbf{React de A à Z (Hooks, Redux)} – Udemy \\
+  \href{https://www.udemy.com/certificate/UC-96bada52-dbe8-46e7-9bc3-90d3e0377070/}{\textit{Voir la certification en ligne}}
+\end{itemize}
+
+
+      
+% -----Benevolat----------------------------------------------------------
+\section{Bénevolat}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Tunaide}{Septembre 2017 -- 2022}
+      {Association pour enfant}{}
+      \CVItemListStart
+    
+        \CVItem{Participation à l’organisation d’ateliers, de jeux et à l’accompagnement des enfants lors d’activités. Développement de compétences en communication, esprit d’équipe et sens du partage}
+      \CVItemListEnd
+      
+  
+     
+  \CVSubHeadingListEnd
+
+% -----LANGUAGES---------------------------------------------------------
+\section{Langues}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{
+     \item \textbf{Arabe}: Langue maternelle \\
+     \item \textbf{Français}: Courant \\
+     \item \textbf{Anglais}: Intermédiaire \\
+    }
+ \end{itemize}
+
+% -----INTERESTS--------------------------------------------------------
+\section{Centres d'intérêt}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{
+     \item \textbf{Dessins et arts graphiques}: Passionnée par l'illustration et le dessin numérique et la peinture \\
+    \item \textbf{Randonnée}: Passionnée par les activités de plein air et la randonnée en montagne. \\
+
+    }
+ \end{itemize}
+
+\end{document}
