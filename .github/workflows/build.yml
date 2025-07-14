@@ -1,27 +1,40 @@
-name: Build CV
+name: Build & Deploy CV
 
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main   # Se déclenche quand tu pousses sur main
+  workflow_dispatch: # Permet aussi de le lancer manuellement
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # ✅ 1. Récupère le repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # ✅ 2. Installe LaTeX et latexmk
       - name: Install LaTeX
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
 
+      # ✅ 3. Compile le CV en PDF
       - name: Compile LaTeX to PDF
         run: latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
 
+      # ✅ 4. Sauvegarde le PDF comme artifact (téléchargeable dans Actions)
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
           path: cv.pdf
+
+      # ✅ 5. Déploie le PDF sur GitHub Pages (branche gh-pages)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          force_orphan: true
