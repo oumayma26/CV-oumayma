@@ -11,32 +11,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Récupérer le repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Installer LaTeX
       - name: Install LaTeX
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
 
-      # 3. Compiler le CV en PDF
       - name: Compile LaTeX to PDF
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex mv cv.pdf cv-oumaymaMETOUI.pdf
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
+          mv cv.pdf cv-oumaymaMETOUI.pdf
 
-      # 4. Sauvegarder le PDF comme artefact (optionnel)
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv-oumaymaMETOUI-pdf
-          path: cv-oumaymaMETOUI-pdf
+          path: cv-oumaymaMETOUI.pdf
 
-      # 5. Déplacer le PDF dans un dossier pour GitHub Pages
       - name: Prepare PDF for deploy
         run: |
-          mkdir public
-          mv cv-oumaymaMETOUI-pdf public/
+          mkdir -p public
+          mv cv-oumaymaMETOUI.pdf public/
 
-      # 6. Déployer uniquement le PDF sur gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
