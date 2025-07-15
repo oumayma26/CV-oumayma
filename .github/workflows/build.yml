@@ -21,7 +21,7 @@ jobs:
 
       # 3. Compiler le CV en PDF
       - name: Compile LaTeX to PDF
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
+        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex mv cv.pdf cv-oumaymaMETOUI.pdf
 
       # 4. Sauvegarder le PDF comme artefact (optionnel)
       - name: Upload PDF artifact
