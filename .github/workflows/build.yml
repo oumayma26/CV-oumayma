@@ -23,6 +23,7 @@ jobs:
       - name: Compile LaTeX to PDF
         run: |
           latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
+          mv cv.pdf cv-oumaymaMETOUI.pdf
 
       # ✅ Étape de debug : lister les fichiers après compilation
       - name: List files after build
