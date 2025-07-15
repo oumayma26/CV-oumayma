@@ -11,28 +11,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Cloner le repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Installer LaTeX
       - name: Install LaTeX
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
 
+      # 3. Compiler et renommer le PDF
       - name: Compile LaTeX to PDF
         run: |
           latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
-          mv cv.pdf cv-oumaymaMETOUI.pdf
 
+      # ✅ Étape de debug : lister les fichiers après compilation
+      - name: List files after build
+        run: ls -lh
+
+      # 4. Sauvegarder le PDF comme artefact (optionnel)
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv-oumaymaMETOUI-pdf
           path: cv-oumaymaMETOUI.pdf
 
+      # 5. Déplacer le PDF dans un dossier pour GitHub Pages
       - name: Prepare PDF for deploy
         run: |
           mkdir -p public
           mv cv-oumaymaMETOUI.pdf public/
 
+      # ✅ Étape de debug : lister les fichiers avant déploiement
+      - name: List files before deploy
+        run: ls -lh public/
+
+      # 6. Déployer sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
