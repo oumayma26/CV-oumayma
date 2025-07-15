@@ -27,14 +27,14 @@ jobs:
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
-          path: cv.pdf
+          name: cv-oumaymaMETOUI-pdf
+          path: cv-oumaymaMETOUI-pdf
 
       # 5. Déplacer le PDF dans un dossier pour GitHub Pages
       - name: Prepare PDF for deploy
         run: |
           mkdir public
-          mv cv.pdf public/
+          mv cv-oumaymaMETOUI-pdf public/
 
       # 6. Déployer uniquement le PDF sur gh-pages
       - name: Deploy to GitHub Pages
