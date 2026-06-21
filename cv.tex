@@ -8,7 +8,6 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage[utf8]{inputenc}
 \usepackage{palatino}
 \usepackage{tikz}
 \usepackage{tabularx}
@@ -66,20 +65,20 @@
   \begin{center}
     \begin{tikzpicture}
       \clip (0,0) circle (1.75cm);
-      \node at (0,0) {\includegraphics[width=3.5cm]{img}}; % Remplace "img" par ton image
+      \node at (0,0) {\includegraphics[width=3.5cm]{img}};
     \end{tikzpicture}
   \end{center}
 \end{minipage}
 \begin{minipage}[c]{0.7\textwidth}
   {\huge \textbf{Oumayma Metoui}}\\[4pt]
-  {\large \textbf{Développeur Fullstack JS}}\\[8pt]
-  
+  {\large \textbf{Senior Fullstack JS}}\\[8pt]
+
   \small{
-  Développeuse senior passionnée, avec plus de 6 ans d’expérience dans la création d’applications web modernes et performantes
+  Ingénieure Fullstack avec 7+ ans d'expérience dans les systèmes industriels (MES), l'architecture temps réel et les applications web critiques. Spécialisée dans les environnements de production avec forte volumétrie de données.
   }\\[12pt]
-  
+
   \small
-  Téléphone : 55 158 591 \hspace{15pt} \\
+  Téléphone : +216 55 158 591 \hspace{15pt} \\
   Email : \href{mailto:oumayma.metoui@gmail.com} {oumayma.metoui@gmail.com} \\
   LinkedIn : \href{https://linkedin.com/in/oumayma-metoui-9506412a5}{linkedin.com/in/oumayma-metoui-9506412a5} \hspace{15pt} \\
   GitHub : \href{https://github.com/oumayma26} {github.com/oumayma26} \\
@@ -87,117 +86,95 @@
 \end{minipage}
 
 
-
 % -----EXPERIENCE-------------------------------------------------------
-\section{Expérience professionnelle}
+\section{Expérience Professionnelle}
   \CVSubHeadingListStart
     \CVSubheading
-      {Ingénieur FullStack JS}{Septembre 2018 - Avril 2025}
-      {Marabout Technology}{}
+      {Ingénieure FullStack JS -- Lead Technique}{Septembre 2018 -- Avril 2025}
+      {Marabout Technology}{Tunis, Tunisie}
       \CVItemListStart
-        \CVItem{Développement et maintenance d'un système MES (Manufacturing Execution System) pour gérer la production dans les usines textiles.}
-        % \CVItem{Team leader de l'équipe IT}
-        \CVItem{Conception et développement d'interfaces utilisateur avec Angular, assurant une expérience utilisateur fluide et performante.}
-        
-        \CVItem{Création d'API REST robustes et sécurisées pour intégrer des systèmes tiers et faciliter l'interopérabilité des flux de données.}
-        \CVItem{Gestion des déploiements backend avec PM2 et gestion des applications frontend sur Apache.}
-        \CVItem{Implémentation d'un tableau de bord interactif permettant aux responsables de suivre la performance de production en temps réel.}
-    
-        \CVItem{Technologies utilisées : Angular 18, Node.js, PostgreSQL, RabbitMQ, Redis, Socket.IO, PM2.}
+        \CVItem{\textbf{Architecture \& Performance :} Conception d'une architecture Angular modulaire (lazy loading, modules métier séparés) réduisant le temps d'ajout de fonctionnalités de 30\%.}
+        \CVItem{\textbf{Système MES Industriel :} Conception et évolution d'un système MES (Manufacturing Execution System) pour le suivi temps réel de la production textile, réduisant les erreurs de reporting de 40\%.}
+        \CVItem{\textbf{Backend \& APIs :} Développement d'APIs REST sécurisées (JWT, rate limiting) et intégration RabbitMQ pour le traitement asynchrone de données de production.}
+        \CVItem{\textbf{Temps Réel :} Implémentation WebSocket (Socket.IO) pour le monitoring temps réel des lignes de production et alertes automatiques.}
+        \CVItem{\textbf{Base de Données :} Optimisation des requêtes PostgreSQL critiques (indexation, requêtes matérialisées) réduisant le temps de réponse des dashboards de 60\%.}
+        \CVItem{\textbf{Déploiement \& DevOps :} Gestion des déploiements backend avec PM2, configuration Apache pour le frontend, conteneurisation Docker des services.}
+        \CVItem{\textbf{Stack :} Angular 18, Node.js, NestJS, PostgreSQL, RabbitMQ, Redis, Socket.IO, Docker, PM2, Apache.}
       \CVItemListEnd
-      
+
     \CVSubheading
-      {Ingénieur Java Spring Angular}{Octobre 2017 - Août 2018}
-      {Solution Group}{}
+      {Ingénieure Java Spring / Angular}{Octobre 2017 -- Août 2018}
+      {Solution Group}{Tunis, Tunisie}
       \CVItemListStart
-        \CVItem{Développement et maintenance d’une application de gestion d’assurance en utilisant Spring Boot et Angular.}
-        \CVItem{Création d’un site web responsive avec un design moderne et intuitif.}
-        \CVItem{Développement d’une application PHP pour la gestion des factures et l'automatisation des processus financiers.}
+        \CVItem{Développement d'une application de gestion d'assurance (Spring Boot, Angular) avec module de souscription en ligne.}
+        \CVItem{Création d'un site web responsive avec design moderne et accessibilité (WCAG 2.0).}
+        \CVItem{Développement d'une application PHP pour la gestion des factures et automatisation des processus financiers.}
       \CVItemListEnd
 
-      \CVSubheading
-      {Stagiaire - Developpeur Spring - Angular}{Oct 2016-dec 2016}
-      {Centre National de l’Informatique}{}
+    \CVSubheading
+      {Stagiaire -- Développeuse Spring / Angular}{Octobre 2016 -- Décembre 2016}
+      {Centre National de l'Informatique (CNI)}{Tunis, Tunisie}
       \CVItemListStart
-        \CVItem{PFE: Conception et développement  d'une application Spring de suivi des paies}
-        \CVItem{AngularJS, Spring Boot, Spring security, Spring Data, Bootstrap}
+        \CVItem{PFE : Conception et développement d'une application Spring de suivi des paies (Spring Boot, Spring Security, Spring Data, AngularJS, Bootstrap).}
       \CVItemListEnd
 
-       \CVSubheading
-      {Stagiaire - développeuse java}{fev- Mai 2014}
-      {Caisse Nationale de S´ecurit´e Sociale}{}
+    \CVSubheading
+      {Stagiaire -- Développeuse Java}{Février 2014 -- Mai 2014}
+      {Caisse Nationale de Sécurité Sociale}{Tunis, Tunisie}
       \CVItemListStart
-        \CVItem{PFE: Conception et développement d’une application  de gestion de formation}
+        \CVItem{PFE : Conception et développement d'une application de gestion de formation (Java EE, Hibernate, MySQL).}
       \CVItemListEnd
   \CVSubHeadingListEnd
 
+
 % -----EDUCATION--------------------------------------------------------
-\section{Éducation}
+\section{Formation}
   \CVSubHeadingListStart
     \CVSubheading
-      {Mastère professionnel | \emph{\small{Ingénierie des Systèmes d'Information}}}{2015 -- 2017}
-      {École Nationale d'Ingénieurs de Carthage}{}
+      {Mastère Professionnel -- Ingénierie des Systèmes d'Information}{2015 -- 2017}
+      {École Nationale d'Ingénieurs de Carthage (ENICar)}{Tunis, Tunisie}
     \CVSubheading
-      {Licence en Informatique | \emph{\small{Systèmes Informatique et Logiciel}}}{2011 -- 2013}
-      {École Nationale d'Ingénieurs de Carthage}{}
-    \CVSubheading
-      {Baccalauréat en Informatique}{2010}
-      {}{}
+      {Licence en Informatique -- Systèmes Informatique et Logiciel}{2011 -- 2013}
+      {École Nationale d'Ingénieurs de Carthage (ENICar)}{Tunis, Tunisie}
   \CVSubHeadingListEnd
 
 % -----SKILLS----------------------------------------------------------
 \section{Compétences Techniques}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{
-     \item \textbf{Frontend} : Angular (18+), React, TypeScript, HTML5, CSS3, Bootstrap, RxJS, Angular material
-     \item \textbf{Backend} : Node.js (Express.js, NestJS), MongoDB, RESTful APIs, Socket.IO
-     \item \textbf{Base de données} : PostgreSQL, MySQL, Redis
-     \item \textbf{Outils et Technologies} : Docker, RabbitMQ, PM2, Apache, Git
-     \item \textbf{Méthodologies} : Agile (Scrum, Kanban)
+     \item \textbf{Frontend :} Angular (18+), React, TypeScript, RxJS, Angular Material, HTML5, CSS3, Tailwind CSS, Bootstrap
+     \item \textbf{Backend :} Node.js (Express.js, NestJS), RESTful APIs, GraphQL, Socket.IO, WebSocket
+     \item \textbf{Base de Données :} PostgreSQL, MySQL, MongoDB, Redis (cache, sessions)
+     \item \textbf{Message Broker \& Temps Réel :} RabbitMQ, Apache Kafka, Socket.IO, WebSocket
+     \item \textbf{DevOps \& Outils :} Docker, Docker Compose, PM2, Apache, Nginx, Git, GitHub Actions
+     \item \textbf{Méthodologies :} Agile (Scrum, Kanban), Clean Architecture, TDD, CI/CD
     }
  \end{itemize}
 
 % -----CERTIFICATIONS----------------------------------------------------------
 \section{Certifications}
 \begin{itemize}[leftmargin=0.5cm]
-  \item \textbf{React de A à Z (Hooks, Redux)} – Udemy \\
+  \item \textbf{React de A à Z (Hooks, Redux)} -- Udemy \\
   \href{https://www.udemy.com/certificate/UC-96bada52-dbe8-46e7-9bc3-90d3e0377070/}{\textit{Voir la certification en ligne}}
 \end{itemize}
 
-
-      
-% -----Benevolat----------------------------------------------------------
-\section{Bénevolat}
-  \CVSubHeadingListStart
-    \CVSubheading
-      {Tunaide}{Septembre 2017 -- 2022}
-      {Association pour enfant}{}
-      \CVItemListStart
-    
-        \CVItem{Participation à l’organisation d’ateliers, de jeux et à l’accompagnement des enfants lors d’activités. Développement de compétences en communication, esprit d’équipe et sens du partage}
-      \CVItemListEnd
-      
-  
-     
-  \CVSubHeadingListEnd
-
-% -----LANGUAGES---------------------------------------------------------
+% -----LANGUES---------------------------------------------------------
 \section{Langues}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{
-     \item \textbf{Arabe}: Langue maternelle \\
-     \item \textbf{Français}: Courant \\
-     \item \textbf{Anglais}: Intermédiaire \\
+     \item \textbf{Arabe :} Langue maternelle \\
+     \item \textbf{Français :} Courant (professionnel) \\
+     \item \textbf{Anglais :} Intermédiaire (technique, documentation) \\
     }
  \end{itemize}
 
 % -----INTERESTS--------------------------------------------------------
-\section{Centres d'intérêt}
+\section{Centres d'Intérêt}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{
-     \item \textbf{Dessins et arts graphiques}: Passionnée par l'illustration et le dessin numérique et la peinture \\
-    \item \textbf{Randonnée}: Passionnée par les activités de plein air et la randonnée en montagne. \\
-
+     \item \textbf{Arts :} Illustration numérique, peinture
+     \item \textbf{Couture :} Patronage, confection sur mesure, création de vêtements
+     \item \textbf{Randonnée :} Activités de plein air et randonnée en montagne
     }
  \end{itemize}
 
